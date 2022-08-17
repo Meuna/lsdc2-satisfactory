@@ -22,7 +22,7 @@ WORKDIR $SATISFACTORY_HOME
 
 ADD https://github.com/Meuna/lsdc2-serverwrap/releases/download/v0.1.0/serverwrap /serverwrap
 
-COPY *.sh $SATISFACTORY_HOME
+COPY start-server.sh update-server.sh $SATISFACTORY_HOME
 RUN groupadd -g $LSDC2_GID -o satisfactory \
     && useradd -g $LSDC2_GID -u $LSDC2_UID -d $SATISFACTORY_HOME -o --no-create-home satisfactory \
     && chmod u+x /serverwrap start-server.sh update-server.sh \
