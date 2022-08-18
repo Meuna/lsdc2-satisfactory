@@ -7,5 +7,8 @@
         "7777": "udp",
         "15000": "udp",
         "15777": "udp"
+    },
+    "envMap": {
+        "LSDC2_SNIFF_IFACE": "eth1"
     }
 }
