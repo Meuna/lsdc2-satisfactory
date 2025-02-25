@@ -1,8 +1,8 @@
 {
     "key": "satisfactory",
     "image": "meuna/lsdc2:satisfactory",
-    "cpu": "2 vCPU",
-    "memory": "6 GB",
+    "cpu": "4 vCPU",
+    "memory": "16 GB",
     "portMap": {
         "7777": "udp",
         "15000": "udp",

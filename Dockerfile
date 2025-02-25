@@ -1,4 +1,4 @@
-from steamcmd/steamcmd:ubuntu
+FROM docker.io/steamcmd/steamcmd:ubuntu
 
 ENV SATISFACTORY_SERVER_APPID=1690800 \
     SATISFACTORY_HOME=/satisfactory/

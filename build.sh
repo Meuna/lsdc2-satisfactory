@@ -1,3 +1,3 @@
 #!/bin/bash
-sudo docker build . -t meuna/lsdc2:satisfactory
-sudo docker push meuna/lsdc2:satisfactory
+podman build . -t docker.io/meuna/lsdc2:satisfactory --format docker
+podman push docker.io/meuna/lsdc2:satisfactory
