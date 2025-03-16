@@ -11,6 +11,6 @@ shutdown() {
 
 trap shutdown SIGINT SIGTERM
 
-./Engine/Binaries/Linux/UE4Server-Linux-Shipping FactoryGame -log -NoSteamClient -unattended ?listen -Port="$SERVER_GAME_PORT" -BeaconPort="$SERVER_BEACON_PORT" -ServerQueryPort="$SERVER_QUERY_PORT" &
+./Engine/Binaries/Linux/FactoryServer-Linux-Shipping FactoryGame -log -NoSteamClient -unattended ?listen -Port="$SERVER_GAME_PORT" -BeaconPort="$SERVER_BEACON_PORT" -ServerQueryPort="$SERVER_QUERY_PORT" &
 pid=$!
 wait $pid

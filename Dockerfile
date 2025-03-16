@@ -26,8 +26,8 @@ RUN groupadd -g $LSDC2_GID -o satisfactory \
     && useradd -g $LSDC2_GID -u $LSDC2_UID -d $SATISFACTORY_HOME -o --no-create-home satisfactory \
     && chmod u+x /serverwrap start-server.sh update-server.sh \
     && chown -R satisfactory:satisfactory $SATISFACTORY_HOME \
+    && su satisfactory ./update-server.sh \
     && rm -rf /root/.steam
 
-EXPOSE 7777/udp 15000/udp 15777/udp
 ENTRYPOINT ["/serverwrap"]
 CMD ["./start-server.sh"]
