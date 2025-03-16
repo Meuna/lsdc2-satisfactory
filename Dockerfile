@@ -19,7 +19,7 @@ ENV LSDC2_SNIFF_IFACE="eth0" \
 
 WORKDIR $SATISFACTORY_HOME
 
-ADD https://github.com/Meuna/lsdc2-serverwrap/releases/download/v0.2.0/serverwrap /serverwrap
+ADD https://github.com/Meuna/lsdc2-serverwrap/releases/download/v0.3.1/serverwrap /serverwrap
 
 COPY start-server.sh update-server.sh $SATISFACTORY_HOME
 RUN groupadd -g $LSDC2_GID -o satisfactory \
