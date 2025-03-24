@@ -1,8 +1,11 @@
 {
-    "key": "satisfactory",
-    "image": "meuna/lsdc2:satisfactory",
-    "cpu": "4 vCPU",
-    "memory": "16 GB",
+    "name": "satisfactory",
+    "engineType": "ecs",
+    "engine": {
+        "image": "meuna/lsdc2:satisfactory",
+        "cpu": "4 vCPU",
+        "memory": "16 GB"
+    },
     "portMap": {
         "7777": "udp",
         "15000": "udp",
