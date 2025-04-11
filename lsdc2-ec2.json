@@ -1,0 +1,18 @@
+{
+    "name": "satisfactory-ec2",
+    "engineType": "ec2",
+    "engine": {
+        "ami": "lsdc2/images/satisfactory",
+        "instanceTypes": ["m6a.large", "m6i.large", "m7i-flex.large", "m7i.large", "m5.large", "m5a.large"],
+        "iops": 4000,
+        "throughput": 400,
+        "fastboot": true
+    },
+    "ingress": {
+        "udp": [7777]
+    },
+    "env": {
+        "LSDC2_SCAN_STDOUT": "true",
+        "LSDC2_WAKEUP_SENTINEL": "Display: Engine is initialized. Leaving FEngineLoop::Init()"
+    }
+}
