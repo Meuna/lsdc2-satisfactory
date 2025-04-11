@@ -15,7 +15,7 @@ RUN groupadd -g $LSDC2_GID -o $LSDC2_USER \
     && su $LSDC2_USER ./update-server.sh \
     && rm -rf /root/.steam
 
-ADD https://github.com/Meuna/lsdc2-serverwrap/releases/download/v0.5.0/serverwrap /usr/local/bin
+ADD https://github.com/Meuna/lsdc2-serverwrap/releases/download/v0.5.1/serverwrap /usr/local/bin
 COPY start-server.sh $LSDC2_HOME
 RUN chown $LSDC2_USER:$LSDC2_USER start-server.sh \
     && chmod +x /usr/local/bin/serverwrap start-server.sh
@@ -24,8 +24,7 @@ ENV GAME_SAVEDIR=$LSDC2_HOME/.config/Epic/FactoryGame/Saved/SaveGames \
     GAME_SAVENAME=lsdc2 \
     QUERY_PORT=15777
 
-ENV LSDC2_SNIFF_IFACE="eth1" \
-    LSDC2_SNIFF_FILTER="udp port $QUERY_PORT" \
+ENV LSDC2_SNIFF_FILTER="udp dst port $QUERY_PORT" \
     LSDC2_PERSIST_FILES="ServerSettings.$QUERY_PORT;server" \
     LSDC2_ZIPFROM=$GAME_SAVEDIR/worlds_local
 
