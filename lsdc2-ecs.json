@@ -6,12 +6,10 @@
         "cpu": "2 vCPU",
         "memory": "8 GB"
     },
-    "portMap": {
-        "7777": "udp",
-        "15000": "udp",
-        "15777": "udp"
+    "ingress": {
+        "udp": [7777]
     },
-    "envMap": {
+    "env": {
         "LSDC2_LOW_MEMORY_WARNING_MB": "2048",
         "LSDC2_LOW_MEMORY_SIGNAL_MB": "1024",
         "LSDC2_SCAN_STDOUT": "true",
